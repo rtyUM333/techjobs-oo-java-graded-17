@@ -33,13 +33,9 @@ public class Job {
     // TODO: Add custom equals and hashCode methods. Consider two Job objects "equal" when their id fields
     //  match.
 
+
     // TODO: Add getters for each field EXCEPT nextId. Add setters for each field EXCEPT nextID
     //  and id.
-
-
-    public int getId() {
-        return id;
-    }
 
     public String getName() {
         return name;
@@ -81,15 +77,26 @@ public class Job {
         this.coreCompetency = coreCompetency;
     }
 
+    public int getId() {
+        return id;
+    }
+
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Job job)) return false;
-        return getId() == job.getId() && Objects.equals(getName(), job.getName()) && Objects.equals(getEmployer(), job.getEmployer()) && Objects.equals(getLocation(), job.getLocation()) && Objects.equals(getPositionType(), job.getPositionType()) && Objects.equals(getCoreCompetency(), job.getCoreCompetency());
+        if (this == o) {
+            return true;
+        }
+        if (o == null) {
+            return false;
+        }
+        if (o instanceof Job otherJob) {
+            return id == otherJob.id;
+        }
+        return false;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getId(), getName(), getEmployer(), getLocation(), getPositionType(), getCoreCompetency());
+        return Objects.hash(getId());
     }
 }
