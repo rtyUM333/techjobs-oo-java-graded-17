@@ -85,12 +85,13 @@ public class JobTest {
                 new PositionType("Quality control"),
                 new CoreCompetency("Persistence"));
 
-        String expectedToString = "ID: " + testJob.getId() + System.lineSeparator() +
-                "Name: Data not available" + System.lineSeparator() +
-                "Employer: Data not available" + System.lineSeparator() +
-                "Location: Data not available" + System.lineSeparator() +
-                "Position Type: Data not available" + System.lineSeparator() +
-                "Core Competency: Data not available" + System.lineSeparator();
+        String expectedToString = System.lineSeparator() +
+                "ID: " + testJob.getId() + System.lineSeparator() +
+                "Name: Product tester" + System.lineSeparator() +
+                "Employer: ACME" + System.lineSeparator() +
+                "Location: Desert" + System.lineSeparator() +
+                "Position Type: Quality control" + System.lineSeparator() +
+                "Core Competency: Persistence" + System.lineSeparator();
 
         assertEquals(expectedToString, testJob.toString());
     }

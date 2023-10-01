@@ -104,9 +104,9 @@ public class Job {
     public String toString(){
             String idString = "ID: " + id;
             String nameString = "Name: " + (name.isEmpty() ? "Data not available" : name);
-            String employerString = "Employer: " + (employer.getValue().isEmpty() ? "Data not available" : employer);
-            String locationString = "Location: " + (location.getValue().isEmpty() ? "Data not available" : location);
-            String positionTypeString = "Position Type: " + (positionType.getValue().isEmpty() ? "Data not available" : positionType);
+            String employerString = "Employer: " + (employer.getValue().isEmpty() ? "Data not available" : employer.getValue());
+            String locationString = "Location: " + (location.getValue().isEmpty() ? "Data not available" : location.getValue());
+            String positionTypeString = "Position Type: " + (positionType.getValue().isEmpty() ? "Data not available" : positionType.getValue());
             String coreCompetencyString = "Core Competency: " + (coreCompetency.getValue().isEmpty() ? "Data not available" : coreCompetency);
 
             return System.lineSeparator() +
