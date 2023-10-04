@@ -86,13 +86,9 @@ public class Job {
         if (this == o) {
             return true;
         }
-        if (o == null) {
+        if (!(o instanceof Job job))
             return false;
-        }
-        if (o instanceof Job otherJob) {
-            return id == otherJob.id;
-        }
-        return false;
+        return getId() == job.getId();
     }
 
     @Override
